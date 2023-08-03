@@ -1,0 +1,152 @@
+{
+    "anims": [
+        {
+            "key": "sleepfrog_idle",
+            "type": "frames",
+            "repeat": -1,
+            "frameRate": 12,
+            "frames": [
+                {
+                    "key": "sleepfrog",
+                    "frame": "sleep0001"
+                },
+                {
+                    "key": "sleepfrog",
+                    "frame": "sleep0002"
+                },
+                {
+                    "key": "sleepfrog",
+                    "frame": "sleep0003"
+                },
+                {
+                    "key": "sleepfrog",
+                    "frame": "sleep0004"
+                },
+                {
+                    "key": "sleepfrog",
+                    "frame": "sleep0005"
+                },
+                {
+                    "key": "sleepfrog",
+                    "frame": "sleep0006"
+                },
+                {
+                    "key": "sleepfrog",
+                    "frame": "sleep0007"
+                },
+                {
+                    "key": "sleepfrog",
+                    "frame": "sleep0008"
+                },
+                {
+                    "key": "sleepfrog",
+                    "frame": "sleep0009"
+                },
+                {
+                    "key": "sleepfrog",
+                    "frame": "sleep0010"
+                },
+                {
+                    "key": "sleepfrog",
+                    "frame": "sleep0011"
+                },
+                {
+                    "key": "sleepfrog",
+                    "frame": "sleep0012"
+                },
+                {
+                    "key": "sleepfrog",
+                    "frame": "sleep0013"
+                },
+                {
+                    "key": "sleepfrog",
+                    "frame": "sleep0014"
+                },
+                {
+                    "key": "sleepfrog",
+                    "frame": "sleep0015"
+                },
+                {
+                    "key": "sleepfrog",
+                    "frame": "sleep0016"
+                },
+                {
+                    "key": "sleepfrog",
+                    "frame": "sleep0017"
+                },
+                {
+                    "key": "sleepfrog",
+                    "frame": "sleep0018"
+                },
+                {
+                    "key": "sleepfrog",
+                    "frame": "sleep0019"
+                },
+                {
+                    "key": "sleepfrog",
+                    "frame": "sleep0020"
+                },
+                {
+                    "key": "sleepfrog",
+                    "frame": "sleep0021"
+                },
+                {
+                    "key": "sleepfrog",
+                    "frame": "sleep0022"
+                },
+                {
+                    "key": "sleepfrog",
+                    "frame": "sleep0023"
+                },
+                {
+                    "key": "sleepfrog",
+                    "frame": "sleep0024"
+                },
+                {
+                    "key": "sleepfrog",
+                    "frame": "sleep0025"
+                },
+                {
+                    "key": "sleepfrog",
+                    "frame": "sleep0026"
+                },
+                {
+                    "key": "sleepfrog",
+                    "frame": "sleep0027"
+                },
+                {
+                    "key": "sleepfrog",
+                    "frame": "sleep0028"
+                },
+                {
+                    "key": "sleepfrog",
+                    "frame": "sleep0029"
+                },
+                {
+                    "key": "sleepfrog",
+                    "frame": "sleep0030"
+                },
+                {
+                    "key": "sleepfrog",
+                    "frame": "sleep0031"
+                },
+                {
+                    "key": "sleepfrog",
+                    "frame": "sleep0032"
+                },
+                {
+                    "key": "sleepfrog",
+                    "frame": "sleep0033"
+                },
+                {
+                    "key": "sleepfrog",
+                    "frame": "sleep0034"
+                },
+                {
+                    "key": "sleepfrog",
+                    "frame": "sleep0035"
+                }
+            ]
+        }
+    ]
+}

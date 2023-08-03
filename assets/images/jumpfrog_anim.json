@@ -1,0 +1,92 @@
+{
+    "anims": [
+        {
+            "key": "jumpfrog_idle",
+            "type": "frames",
+            "repeat": 0,
+            "frameRate": 12,
+            "frames": [
+                {
+                    "key": "jumpfrog",
+                    "frame": "jump0001"
+                },
+                {
+                    "key": "jumpfrog",
+                    "frame": "jump0002"
+                },
+                {
+                    "key": "jumpfrog",
+                    "frame": "jump0003"
+                },
+                {
+                    "key": "jumpfrog",
+                    "frame": "jump0004"
+                },
+                {
+                    "key": "jumpfrog",
+                    "frame": "jump0005"
+                },
+                {
+                    "key": "jumpfrog",
+                    "frame": "jump0006"
+                },
+                {
+                    "key": "jumpfrog",
+                    "frame": "jump0007"
+                },
+                {
+                    "key": "jumpfrog",
+                    "frame": "jump0008"
+                },
+                {
+                    "key": "jumpfrog",
+                    "frame": "jump0009"
+                },
+                {
+                    "key": "jumpfrog",
+                    "frame": "jump0010"
+                },
+                {
+                    "key": "jumpfrog",
+                    "frame": "jump0011"
+                },
+                {
+                    "key": "jumpfrog",
+                    "frame": "jump0012"
+                },
+                {
+                    "key": "jumpfrog",
+                    "frame": "jump0013"
+                },
+                {
+                    "key": "jumpfrog",
+                    "frame": "jump0014"
+                },
+                {
+                    "key": "jumpfrog",
+                    "frame": "jump0015"
+                },
+                {
+                    "key": "jumpfrog",
+                    "frame": "jump0016"
+                },
+                {
+                    "key": "jumpfrog",
+                    "frame": "jump0017"
+                },
+                {
+                    "key": "jumpfrog",
+                    "frame": "jump0018"
+                },
+                {
+                    "key": "jumpfrog",
+                    "frame": "jump0019"
+                },
+                {
+                    "key": "jumpfrog",
+                    "frame": "jump0020"
+                }
+            ]
+        }
+    ]
+}

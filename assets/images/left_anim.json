@@ -1,0 +1,92 @@
+{
+    "anims": [
+        {
+            "key": "idle",
+            "type": "frames",
+            "repeat": -1,
+            "frameRate": 12,
+            "frames": [
+                {
+                    "key": "left",
+                    "frame": "left0001"
+                },
+                {
+                    "key": "left",
+                    "frame": "left0002"
+                },
+                {
+                    "key": "left",
+                    "frame": "left0003"
+                },
+                {
+                    "key": "left",
+                    "frame": "left0004"
+                },
+                {
+                    "key": "left",
+                    "frame": "left0005"
+                },
+                {
+                    "key": "left",
+                    "frame": "left0006"
+                },
+                {
+                    "key": "left",
+                    "frame": "left0007"
+                },
+                {
+                    "key": "left",
+                    "frame": "left0008"
+                },
+                {
+                    "key": "left",
+                    "frame": "left0009"
+                },
+                {
+                    "key": "left",
+                    "frame": "left0010"
+                },
+                {
+                    "key": "left",
+                    "frame": "left0011"
+                },
+                {
+                    "key": "left",
+                    "frame": "left0012"
+                },
+                {
+                    "key": "left",
+                    "frame": "left0013"
+                },
+                {
+                    "key": "left",
+                    "frame": "left0014"
+                },
+                {
+                    "key": "left",
+                    "frame": "left0015"
+                },
+                {
+                    "key": "left",
+                    "frame": "left0016"
+                },
+                {
+                    "key": "left",
+                    "frame": "left0017"
+                },
+                {
+                    "key": "left",
+                    "frame": "left0018"
+                },
+                {
+                    "key": "left",
+                    "frame": "left0019"
+                },
+                {
+                    "key": "left",
+                    "frame": "left0020"
+                }
+            ]
+        }
+    ]
+}

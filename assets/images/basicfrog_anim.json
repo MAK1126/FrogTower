@@ -1,0 +1,92 @@
+{
+    "anims": [
+        {
+            "key": "basicfrog_idle",
+            "type": "frames",
+            "repeat": -1,
+            "frameRate": 30,
+            "frames": [
+                {
+                    "key": "basicfrog",
+                    "frame": "basic0001"
+                },
+                {
+                    "key": "basicfrog",
+                    "frame": "basic0002"
+                },
+                {
+                    "key": "basicfrog",
+                    "frame": "basic0003"
+                },
+                {
+                    "key": "basicfrog",
+                    "frame": "basic0004"
+                },
+                {
+                    "key": "basicfrog",
+                    "frame": "basic0005"
+                },
+                {
+                    "key": "basicfrog",
+                    "frame": "basic0006"
+                },
+                {
+                    "key": "basicfrog",
+                    "frame": "basic0007"
+                },
+                {
+                    "key": "basicfrog",
+                    "frame": "basic0008"
+                },
+                {
+                    "key": "basicfrog",
+                    "frame": "basic0009"
+                },
+                {
+                    "key": "basicfrog",
+                    "frame": "basic0010"
+                },
+                {
+                    "key": "basicfrog",
+                    "frame": "basic0011"
+                },
+                {
+                    "key": "basicfrog",
+                    "frame": "basic0012"
+                },
+                {
+                    "key": "basicfrog",
+                    "frame": "basic0013"
+                },
+                {
+                    "key": "basicfrog",
+                    "frame": "basic0014"
+                },
+                {
+                    "key": "basicfrog",
+                    "frame": "basic0015"
+                },
+                {
+                    "key": "basicfrog",
+                    "frame": "basic0016"
+                },
+                {
+                    "key": "basicfrog",
+                    "frame": "basic0017"
+                },
+                {
+                    "key": "basicfrog",
+                    "frame": "basic0018"
+                },
+                {
+                    "key": "basicfrog",
+                    "frame": "basic0019"
+                },
+                {
+                    "key": "basicfrog",
+                    "frame": "basic0020"
+                }
+            ]
+        }
+    ]
+}

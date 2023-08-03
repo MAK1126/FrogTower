@@ -1,0 +1,203 @@
+{
+    "frames": [
+        {
+            "filename": "landing0015",
+            "frame": {
+                "w": 279,
+                "h": 167,
+                "x": 0,
+                "y": 0
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "landing0001",
+            "frame": {
+                "w": 279,
+                "h": 167,
+                "x": 0,
+                "y": 167
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "landing0002",
+            "frame": {
+                "w": 279,
+                "h": 167,
+                "x": 0,
+                "y": 334
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "landing0003",
+            "frame": {
+                "w": 279,
+                "h": 167,
+                "x": 0,
+                "y": 501
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "landing0004",
+            "frame": {
+                "w": 279,
+                "h": 167,
+                "x": 0,
+                "y": 668
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "landing0006",
+            "frame": {
+                "w": 279,
+                "h": 167,
+                "x": 0,
+                "y": 835
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "landing0005",
+            "frame": {
+                "w": 279,
+                "h": 167,
+                "x": 0,
+                "y": 1002
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "landing0007",
+            "frame": {
+                "w": 279,
+                "h": 167,
+                "x": 0,
+                "y": 1169
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "landing0008",
+            "frame": {
+                "w": 279,
+                "h": 167,
+                "x": 0,
+                "y": 1336
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "landing0009",
+            "frame": {
+                "w": 279,
+                "h": 167,
+                "x": 0,
+                "y": 1503
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "landing0010",
+            "frame": {
+                "w": 279,
+                "h": 167,
+                "x": 0,
+                "y": 1670
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "landing0011",
+            "frame": {
+                "w": 279,
+                "h": 167,
+                "x": 0,
+                "y": 1837
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "landing0012",
+            "frame": {
+                "w": 279,
+                "h": 167,
+                "x": 0,
+                "y": 2004
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "landing0013",
+            "frame": {
+                "w": 279,
+                "h": 167,
+                "x": 0,
+                "y": 2171
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "landing0014",
+            "frame": {
+                "w": 279,
+                "h": 167,
+                "x": 0,
+                "y": 2338
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        }
+    ],
+    "meta": {
+        "description": "Atlas generado con Atlas Packer Gamma V2",
+        "web": "https://gammafp.github.io/atlas-packer-phaser/"
+    }
+}

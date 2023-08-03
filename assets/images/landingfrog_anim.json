@@ -1,0 +1,71 @@
+{
+    "anims": [
+        {
+            "key": "landingfrog_idle",
+            "type": "frames",
+            "frameRate": 18,
+            "frames": [
+                {
+                    "key": "landingfrog",
+                    "frame": "landing0001"
+                },
+                {
+                    "key": "landingfrog",
+                    "frame": "landing0002"
+                },
+                {
+                    "key": "landingfrog",
+                    "frame": "landing0003"
+                },
+                {
+                    "key": "landingfrog",
+                    "frame": "landing0004"
+                },
+                {
+                    "key": "landingfrog",
+                    "frame": "landing0005"
+                },
+                {
+                    "key": "landingfrog",
+                    "frame": "landing0006"
+                },
+                {
+                    "key": "landingfrog",
+                    "frame": "landing0007"
+                },
+                {
+                    "key": "landingfrog",
+                    "frame": "landing0008"
+                },
+                {
+                    "key": "landingfrog",
+                    "frame": "landing0009"
+                },
+                {
+                    "key": "landingfrog",
+                    "frame": "landing0010"
+                },
+                {
+                    "key": "landingfrog",
+                    "frame": "landing0011"
+                },
+                {
+                    "key": "landingfrog",
+                    "frame": "landing0012"
+                },
+                {
+                    "key": "landingfrog",
+                    "frame": "landing0013"
+                },
+                {
+                    "key": "landingfrog",
+                    "frame": "landing0014"
+                },
+                {
+                    "key": "landingfrog",
+                    "frame": "landing0015"
+                }
+            ]
+        }
+    ]
+}

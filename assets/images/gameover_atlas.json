@@ -1,0 +1,502 @@
+{
+    "frames": [
+        {
+            "filename": "gameover0001",
+            "frame": {
+                "w": 704,
+                "h": 113,
+                "x": 0,
+                "y": 0
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "gameover0002",
+            "frame": {
+                "w": 704,
+                "h": 113,
+                "x": 0,
+                "y": 113
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "gameover0003",
+            "frame": {
+                "w": 704,
+                "h": 113,
+                "x": 0,
+                "y": 226
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "gameover0004",
+            "frame": {
+                "w": 704,
+                "h": 113,
+                "x": 0,
+                "y": 339
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "gameover0005",
+            "frame": {
+                "w": 704,
+                "h": 113,
+                "x": 0,
+                "y": 452
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "gameover0006",
+            "frame": {
+                "w": 704,
+                "h": 113,
+                "x": 0,
+                "y": 565
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "gameover0007",
+            "frame": {
+                "w": 704,
+                "h": 113,
+                "x": 0,
+                "y": 678
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "gameover0008",
+            "frame": {
+                "w": 704,
+                "h": 113,
+                "x": 0,
+                "y": 791
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "gameover0009",
+            "frame": {
+                "w": 704,
+                "h": 113,
+                "x": 0,
+                "y": 904
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "gameover0010",
+            "frame": {
+                "w": 704,
+                "h": 113,
+                "x": 0,
+                "y": 1017
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "gameover0011",
+            "frame": {
+                "w": 704,
+                "h": 113,
+                "x": 0,
+                "y": 1130
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "gameover0012",
+            "frame": {
+                "w": 704,
+                "h": 113,
+                "x": 0,
+                "y": 1243
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "gameover0013",
+            "frame": {
+                "w": 704,
+                "h": 113,
+                "x": 0,
+                "y": 1356
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "gameover0014",
+            "frame": {
+                "w": 704,
+                "h": 113,
+                "x": 0,
+                "y": 1469
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "gameover0015",
+            "frame": {
+                "w": 704,
+                "h": 113,
+                "x": 0,
+                "y": 1582
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "gameover0016",
+            "frame": {
+                "w": 704,
+                "h": 113,
+                "x": 0,
+                "y": 1695
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "gameover0017",
+            "frame": {
+                "w": 704,
+                "h": 113,
+                "x": 0,
+                "y": 1808
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "gameover0018",
+            "frame": {
+                "w": 704,
+                "h": 113,
+                "x": 0,
+                "y": 1921
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "gameover0019",
+            "frame": {
+                "w": 704,
+                "h": 113,
+                "x": 0,
+                "y": 2034
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "gameover0020",
+            "frame": {
+                "w": 704,
+                "h": 113,
+                "x": 0,
+                "y": 2147
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "gameover0021",
+            "frame": {
+                "w": 704,
+                "h": 113,
+                "x": 0,
+                "y": 2260
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "gameover0022",
+            "frame": {
+                "w": 704,
+                "h": 113,
+                "x": 0,
+                "y": 2373
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "gameover0023",
+            "frame": {
+                "w": 704,
+                "h": 113,
+                "x": 0,
+                "y": 2486
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "gameover0024",
+            "frame": {
+                "w": 704,
+                "h": 113,
+                "x": 0,
+                "y": 2599
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "gameover0025",
+            "frame": {
+                "w": 704,
+                "h": 113,
+                "x": 0,
+                "y": 2712
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "gameover0026",
+            "frame": {
+                "w": 704,
+                "h": 113,
+                "x": 0,
+                "y": 2825
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "gameover0027",
+            "frame": {
+                "w": 704,
+                "h": 113,
+                "x": 0,
+                "y": 2938
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "gameover0028",
+            "frame": {
+                "w": 704,
+                "h": 113,
+                "x": 0,
+                "y": 3051
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "gameover0029",
+            "frame": {
+                "w": 704,
+                "h": 113,
+                "x": 0,
+                "y": 3164
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "gameover0030",
+            "frame": {
+                "w": 704,
+                "h": 113,
+                "x": 0,
+                "y": 3277
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "gameover0031",
+            "frame": {
+                "w": 704,
+                "h": 113,
+                "x": 0,
+                "y": 3390
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "gameover0032",
+            "frame": {
+                "w": 704,
+                "h": 113,
+                "x": 0,
+                "y": 3503
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "gameover0034",
+            "frame": {
+                "w": 704,
+                "h": 113,
+                "x": 0,
+                "y": 3616
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "gameover0035",
+            "frame": {
+                "w": 704,
+                "h": 113,
+                "x": 0,
+                "y": 3729
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "gameover0033",
+            "frame": {
+                "w": 704,
+                "h": 113,
+                "x": 0,
+                "y": 3842
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "gameover0036",
+            "frame": {
+                "w": 704,
+                "h": 113,
+                "x": 0,
+                "y": 3955
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "gameover0037",
+            "frame": {
+                "w": 704,
+                "h": 113,
+                "x": 0,
+                "y": 4068
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "gameover0038",
+            "frame": {
+                "w": 704,
+                "h": 113,
+                "x": 0,
+                "y": 4181
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        }
+    ],
+    "meta": {
+        "description": "Atlas generado con Atlas Packer Gamma V2",
+        "web": "https://gammafp.github.io/atlas-packer-phaser/"
+    }
+}

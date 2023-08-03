@@ -1,0 +1,92 @@
+{
+    "anims": [
+        {
+            "key": "up_idle",
+            "type": "frames",
+            "repeat": -1,
+            "frameRate": 12,
+            "frames": [
+                {
+                    "key": "up",
+                    "frame": "up0001"
+                },
+                {
+                    "key": "up",
+                    "frame": "up0002"
+                },
+                {
+                    "key": "up",
+                    "frame": "up0003"
+                },
+                {
+                    "key": "up",
+                    "frame": "up0004"
+                },
+                {
+                    "key": "up",
+                    "frame": "up0005"
+                },
+                {
+                    "key": "up",
+                    "frame": "up0006"
+                },
+                {
+                    "key": "up",
+                    "frame": "up0007"
+                },
+                {
+                    "key": "up",
+                    "frame": "up0008"
+                },
+                {
+                    "key": "up",
+                    "frame": "up0009"
+                },
+                {
+                    "key": "up",
+                    "frame": "up0010"
+                },
+                {
+                    "key": "up",
+                    "frame": "up0011"
+                },
+                {
+                    "key": "up",
+                    "frame": "up0012"
+                },
+                {
+                    "key": "up",
+                    "frame": "up0013"
+                },
+                {
+                    "key": "up",
+                    "frame": "up0014"
+                },
+                {
+                    "key": "up",
+                    "frame": "up0015"
+                },
+                {
+                    "key": "up",
+                    "frame": "up0016"
+                },
+                {
+                    "key": "up",
+                    "frame": "up0017"
+                },
+                {
+                    "key": "up",
+                    "frame": "up0018"
+                },
+                {
+                    "key": "up",
+                    "frame": "up0019"
+                },
+                {
+                    "key": "up",
+                    "frame": "up0020"
+                }
+            ]
+        }
+    ]
+}

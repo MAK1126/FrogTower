@@ -1,0 +1,100 @@
+{
+    "anims": [
+        {
+            "key": "bug_idle",
+            "type": "frames",
+            "repeat": -1,
+            "frameRate": 12,
+            "frames": [
+                {
+                    "key": "bug",
+                    "frame": "bug0001"
+                },
+                {
+                    "key": "bug",
+                    "frame": "bug0002"
+                },
+                {
+                    "key": "bug",
+                    "frame": "bug0003"
+                },
+                {
+                    "key": "bug",
+                    "frame": "bug0004"
+                },
+                {
+                    "key": "bug",
+                    "frame": "bug0005"
+                },
+                {
+                    "key": "bug",
+                    "frame": "bug0006"
+                },
+                {
+                    "key": "bug",
+                    "frame": "bug0007"
+                },
+                {
+                    "key": "bug",
+                    "frame": "bug0008"
+                },
+                {
+                    "key": "bug",
+                    "frame": "bug0009"
+                },
+                {
+                    "key": "bug",
+                    "frame": "bug0010"
+                },
+                {
+                    "key": "bug",
+                    "frame": "bug0011"
+                },
+                {
+                    "key": "bug",
+                    "frame": "bug0012"
+                },
+                {
+                    "key": "bug",
+                    "frame": "bug0013"
+                },
+                {
+                    "key": "bug",
+                    "frame": "bug0014"
+                },
+                {
+                    "key": "bug",
+                    "frame": "bug0015"
+                },
+                {
+                    "key": "bug",
+                    "frame": "bug0016"
+                },
+                {
+                    "key": "bug",
+                    "frame": "bug0017"
+                },
+                {
+                    "key": "bug",
+                    "frame": "bug0018"
+                },
+                {
+                    "key": "bug",
+                    "frame": "bug0019"
+                },
+                {
+                    "key": "bug",
+                    "frame": "bug0020"
+                },
+                {
+                    "key": "bug",
+                    "frame": "bug0021"
+                },
+                {
+                    "key": "bug",
+                    "frame": "bug0022"
+                }
+            ]
+        }
+    ]
+}

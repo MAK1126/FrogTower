@@ -1,0 +1,216 @@
+{
+    "anims": [
+        {
+            "key": "wakeupfrog_idle",
+            "type": "frames",
+            "repeat": 0,
+            "frameRate": 50,
+            "frames": [
+                {
+                    "key": "wakeupfrog",
+                    "frame": "wakeup0001"
+                },
+                {
+                    "key": "wakeupfrog",
+                    "frame": "wakeup0002"
+                },
+                {
+                    "key": "wakeupfrog",
+                    "frame": "wakeup0003"
+                },
+                {
+                    "key": "wakeupfrog",
+                    "frame": "wakeup0004"
+                },
+                {
+                    "key": "wakeupfrog",
+                    "frame": "wakeup0005"
+                },
+                {
+                    "key": "wakeupfrog",
+                    "frame": "wakeup0006"
+                },
+                {
+                    "key": "wakeupfrog",
+                    "frame": "wakeup0007"
+                },
+                {
+                    "key": "wakeupfrog",
+                    "frame": "wakeup0008"
+                },
+                {
+                    "key": "wakeupfrog",
+                    "frame": "wakeup0009"
+                },
+                {
+                    "key": "wakeupfrog",
+                    "frame": "wakeup0010"
+                },
+                {
+                    "key": "wakeupfrog",
+                    "frame": "wakeup0011"
+                },
+                {
+                    "key": "wakeupfrog",
+                    "frame": "wakeup0012"
+                },
+                {
+                    "key": "wakeupfrog",
+                    "frame": "wakeup0013"
+                },
+                {
+                    "key": "wakeupfrog",
+                    "frame": "wakeup0014"
+                },
+                {
+                    "key": "wakeupfrog",
+                    "frame": "wakeup0015"
+                },
+                {
+                    "key": "wakeupfrog",
+                    "frame": "wakeup0016"
+                },
+                {
+                    "key": "wakeupfrog",
+                    "frame": "wakeup0017"
+                },
+                {
+                    "key": "wakeupfrog",
+                    "frame": "wakeup0018"
+                },
+                {
+                    "key": "wakeupfrog",
+                    "frame": "wakeup0019"
+                },
+                {
+                    "key": "wakeupfrog",
+                    "frame": "wakeup0020"
+                },
+                {
+                    "key": "wakeupfrog",
+                    "frame": "wakeup0021"
+                },
+                {
+                    "key": "wakeupfrog",
+                    "frame": "wakeup0022"
+                },
+                {
+                    "key": "wakeupfrog",
+                    "frame": "wakeup0023"
+                },
+                {
+                    "key": "wakeupfrog",
+                    "frame": "wakeup0024"
+                },
+                {
+                    "key": "wakeupfrog",
+                    "frame": "wakeup0025"
+                },
+                {
+                    "key": "wakeupfrog",
+                    "frame": "wakeup0026"
+                },
+                {
+                    "key": "wakeupfrog",
+                    "frame": "wakeup0027"
+                },
+                {
+                    "key": "wakeupfrog",
+                    "frame": "wakeup0028"
+                },
+                {
+                    "key": "wakeupfrog",
+                    "frame": "wakeup0029"
+                },
+                {
+                    "key": "wakeupfrog",
+                    "frame": "wakeup0030"
+                },
+                {
+                    "key": "wakeupfrog",
+                    "frame": "wakeup0031"
+                },
+                {
+                    "key": "wakeupfrog",
+                    "frame": "wakeup0032"
+                },
+                {
+                    "key": "wakeupfrog",
+                    "frame": "wakeup0033"
+                },
+                {
+                    "key": "wakeupfrog",
+                    "frame": "wakeup0034"
+                },
+                {
+                    "key": "wakeupfrog",
+                    "frame": "wakeup0035"
+                },
+                {
+                    "key": "wakeupfrog",
+                    "frame": "wakeup0036"
+                },
+                {
+                    "key": "wakeupfrog",
+                    "frame": "wakeup0037"
+                },
+                {
+                    "key": "wakeupfrog",
+                    "frame": "wakeup0038"
+                },
+                {
+                    "key": "wakeupfrog",
+                    "frame": "wakeup0039"
+                },
+                {
+                    "key": "wakeupfrog",
+                    "frame": "wakeup0040"
+                },
+                {
+                    "key": "wakeupfrog",
+                    "frame": "wakeup0042"
+                },
+                {
+                    "key": "wakeupfrog",
+                    "frame": "wakeup0041"
+                },
+                {
+                    "key": "wakeupfrog",
+                    "frame": "wakeup0042"
+                },
+                {
+                    "key": "wakeupfrog",
+                    "frame": "wakeup0043"
+                },
+                {
+                    "key": "wakeupfrog",
+                    "frame": "wakeup0044"
+                },
+                {
+                    "key": "wakeupfrog",
+                    "frame": "wakeup0045"
+                },
+                {
+                    "key": "wakeupfrog",
+                    "frame": "wakeup0046"
+                },
+                {
+                    "key": "wakeupfrog",
+                    "frame": "wakeup0047"
+                },
+                {
+                    "key": "wakeupfrog",
+                    "frame": "wakeup0048"
+                },
+                {
+                    "key": "wakeupfrog",
+                    "frame": "wakeup0049"
+                },
+                {
+                    "key": "wakeupfrog",
+                    "frame": "wakeup0050"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,268 @@
+{
+    "frames": [
+        {
+            "filename": "right0001",
+            "frame": {
+                "w": 89,
+                "h": 90,
+                "x": 0,
+                "y": 0
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "right0002",
+            "frame": {
+                "w": 89,
+                "h": 90,
+                "x": 89,
+                "y": 0
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "right0003",
+            "frame": {
+                "w": 89,
+                "h": 90,
+                "x": 0,
+                "y": 90
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "right0004",
+            "frame": {
+                "w": 89,
+                "h": 90,
+                "x": 89,
+                "y": 90
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "right0005",
+            "frame": {
+                "w": 89,
+                "h": 90,
+                "x": 178,
+                "y": 0
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "right0006",
+            "frame": {
+                "w": 89,
+                "h": 90,
+                "x": 178,
+                "y": 90
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "right0007",
+            "frame": {
+                "w": 89,
+                "h": 90,
+                "x": 0,
+                "y": 180
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "right0008",
+            "frame": {
+                "w": 89,
+                "h": 90,
+                "x": 89,
+                "y": 180
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "right0009",
+            "frame": {
+                "w": 89,
+                "h": 90,
+                "x": 178,
+                "y": 180
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "right0010",
+            "frame": {
+                "w": 89,
+                "h": 90,
+                "x": 267,
+                "y": 0
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "right0011",
+            "frame": {
+                "w": 89,
+                "h": 90,
+                "x": 267,
+                "y": 90
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "right0012",
+            "frame": {
+                "w": 89,
+                "h": 90,
+                "x": 267,
+                "y": 180
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "right0013",
+            "frame": {
+                "w": 89,
+                "h": 90,
+                "x": 0,
+                "y": 270
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "right0014",
+            "frame": {
+                "w": 89,
+                "h": 90,
+                "x": 89,
+                "y": 270
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "right0015",
+            "frame": {
+                "w": 89,
+                "h": 90,
+                "x": 178,
+                "y": 270
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "right0016",
+            "frame": {
+                "w": 89,
+                "h": 90,
+                "x": 267,
+                "y": 270
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "right0017",
+            "frame": {
+                "w": 89,
+                "h": 90,
+                "x": 356,
+                "y": 0
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "right0018",
+            "frame": {
+                "w": 89,
+                "h": 90,
+                "x": 356,
+                "y": 90
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "right0019",
+            "frame": {
+                "w": 89,
+                "h": 90,
+                "x": 356,
+                "y": 180
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        },
+        {
+            "filename": "right0020",
+            "frame": {
+                "w": 89,
+                "h": 90,
+                "x": 356,
+                "y": 270
+            },
+            "anchor": {
+                "x": 0.5,
+                "y": 0.5
+            }
+        }
+    ],
+    "meta": {
+        "description": "Atlas generado con Atlas Packer Gamma V2",
+        "web": "https://gammafp.github.io/atlas-packer-phaser/"
+    }
+}

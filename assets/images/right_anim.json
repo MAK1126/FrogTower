@@ -1,0 +1,92 @@
+{
+    "anims": [
+        {
+            "key": "idle",
+            "type": "frames",
+            "repeat": -1,
+            "frameRate": 12,
+            "frames": [
+                {
+                    "key": "right",
+                    "frame": "right0001"
+                },
+                {
+                    "key": "right",
+                    "frame": "right0002"
+                },
+                {
+                    "key": "right",
+                    "frame": "right0003"
+                },
+                {
+                    "key": "right",
+                    "frame": "right0004"
+                },
+                {
+                    "key": "right",
+                    "frame": "right0005"
+                },
+                {
+                    "key": "right",
+                    "frame": "right0006"
+                },
+                {
+                    "key": "right",
+                    "frame": "right0007"
+                },
+                {
+                    "key": "right",
+                    "frame": "right0008"
+                },
+                {
+                    "key": "right",
+                    "frame": "right0009"
+                },
+                {
+                    "key": "right",
+                    "frame": "right0010"
+                },
+                {
+                    "key": "right",
+                    "frame": "right0011"
+                },
+                {
+                    "key": "right",
+                    "frame": "right0012"
+                },
+                {
+                    "key": "right",
+                    "frame": "right0013"
+                },
+                {
+                    "key": "right",
+                    "frame": "right0014"
+                },
+                {
+                    "key": "right",
+                    "frame": "right0015"
+                },
+                {
+                    "key": "right",
+                    "frame": "right0016"
+                },
+                {
+                    "key": "right",
+                    "frame": "right0017"
+                },
+                {
+                    "key": "right",
+                    "frame": "right0018"
+                },
+                {
+                    "key": "right",
+                    "frame": "right0019"
+                },
+                {
+                    "key": "right",
+                    "frame": "right0020"
+                }
+            ]
+        }
+    ]
+}
