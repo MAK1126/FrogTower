@@ -40,17 +40,6 @@ export default class Player extends Phaser.Physics.Matter.Sprite {
         this.mainScene = scene;
         this.playerColliderS = false; 
         this.isConditionMet = false;
-
-        
-
-
-        // Main 씬에서 생성한 배경 이미지를 참조하여 사용
-        // const bgskySprites = this.scene.bgskySprites;
-        // bgskySprites.forEach((bgsky) => {
-        //     const copiedBgsky = this.add.sprite(bgsky.x, bgsky.y, "bgsky");
-        //     copiedBgsky.setOrigin(0, 0);
-        //     copiedBgsky.setDepth(-1); // 배경 이미지가 플레이어보다 뒤에 그려지도록 깊이 설정
-        // });
     }
     static preload(scene)
     {
@@ -115,13 +104,11 @@ export default class Player extends Phaser.Physics.Matter.Sprite {
     GameoverChangeScene() {
         // 다른 씬으로 전환
         this.scene.scene.start("loading"); //(임시로 로딩 씬으로 해놨음.)
+        // this.scene.sound.stopAll(); // 전체 사운드 정지
     }
     create(){
          // 카메라 이동을 위해 추가
         this.isScrolling = false;
-
-        // // 이미지 생성
-        // bgskyToShow = this.mainScene.player.add.image(0, 0, 'bgsky').setOrigin(0);
     }
     update()
     {
@@ -164,6 +151,9 @@ export default class Player extends Phaser.Physics.Matter.Sprite {
                 this.scene.life3.setVisible(false); // 세 번째 조건이 충족되었을 때 원하는 동작 수행
                 this.Gameover();
 
+                // 모든 입력 비활성화
+                // this.input.enabled = true;
+
             }
             
             //
@@ -205,31 +195,6 @@ export default class Player extends Phaser.Physics.Matter.Sprite {
     onLandingComplete(animation, frame)
     {
         this.Init();
-
-        // 배경 이미지 배열에 bgsky1과 bgsky2 추가
-        // this.bgskySprites.push(this.bgsky1);
-        // this.bgskySprites.push(this.bgsky2);
-
-        // // 카메라 이동 시에 호출되는 함수 등록
-        // this.scene.cameras.main.on('cameraupdate', this.scrollBackground, this);
-
     }
-
-    // scrollBackground() {
-    //     const cameraScrollY = this.cameras.main.scrollY;
-    //     const spriteHeight = this.bgsky1.height;
-
-    //     // 첫 번째 배경(bgsky1)이 뷰포트 아래쪽으로 벗어났을 때
-    //     if (this.bgsky1.y - spriteHeight / 2 > cameraScrollY + this.cameras.main.height) {
-    //         // 배경을 뷰포트 위쪽으로 이동하여 무한 반복 구현
-    //         this.bgsky1.y -= spriteHeight * 2;
-    //     }
-
-    //     // 두 번째 배경(bgsky2)이 뷰포트 아래쪽으로 벗어났을 때
-    //     if (this.bgsky2.y - spriteHeight / 2 > cameraScrollY + this.cameras.main.height) {
-    //         // 배경을 뷰포트 위쪽으로 이동하여 무한 반복 구현
-    //         this.bgsky2.y -= spriteHeight * 2;
-    //     }
-    // }
 
 }

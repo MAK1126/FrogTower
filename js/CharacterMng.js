@@ -174,11 +174,7 @@ export default class CharacterMng extends Phaser.GameObjects.GameObject {
     //--------------------basicfrog와 player 충돌 이벤트-------------------
     collisionCheck(event)
     {
-
         event.pairs.forEach(async (pair) => {
-
-
-        console.log("this.scene.characterMng.player.isFall : " + this.scene.characterMng.player.isFall);
 
         if(this.scene.characterMng.player.isFall == false)
             return;
@@ -215,7 +211,8 @@ export default class CharacterMng extends Phaser.GameObjects.GameObject {
             //this.scene.score++;  //-- 이건 1점씩 오르기
                         
             
-                        
+            this.scene.characterMoveCnt++;
+
             // 점수를 UI에 표시
             this.scene.scoreText.setText(`${this.scene.score}`);
             // 텍스트 위치 고정
@@ -240,30 +237,26 @@ export default class CharacterMng extends Phaser.GameObjects.GameObject {
                 // 카메라 이동
                 this.scene.characterMng.startCameraMove(cc);
 
-                // 배경 이미지들이 뷰포트 아래로 벗어났을 경우 다시 위로 위치시키기
-                // if (this.scene.bgsky1.y > this.scene.cameras.main.scrollY + this.scene.game.config.height) {
-                //     this.scene.bgsky2.y = this.scene.bgsky1.y - this.scene.bgsky2.height;
-                // }
+                if(this.scene.characterMoveCnt > 7)
+                {
+                    this.scene.bgskySprites[0].y = this.scene.bgskySprites[2].y - 1280;
+                    this.scene.bg2.setTexture('bgsky');
+                    console.log("########### b1 change ###############");
+                    let bottmBG = this.scene.bgskySprites[0];
+                    this.scene.bgskySprites.splice(0,1);
+                    this.scene.bgskySprites.push(bottmBG);
 
-                // if (this.scene.bgsky2.y > this.scene.cameras.main.scrollY + this.scene.game.config.height) {
-                //     this.scene.bgsky1.y = this.scene.bgsky2.y - this.scene.bgsky1.height;
-                // }
-
-                // 파리 이동하는 곳으로?
-                // 하나의 배경 이미지가 카메라 시야를 벗어나는지 확인
-                if (this.scene.characterMng.player.y <= -1920) {
-                    // bgsky1을 bgsky2 위에 다시 배치
-                    this.scene.bgsky1.y = this.scene.bgsky3.y - 1280;
-                }else if (this.scene.characterMng.player.y <= -3200) {
-                    // bgsky2를 bgsky1 위에 다시 배치
-                    this.scene.bgsky2.y = this.scene.bgsky1.y - 1280;
-                }else if (this.scene.characterMng.player.y <= -4480) {
-                    // bgsky2를 bgsky1 위에 다시 배치
-                    this.scene.bgsky3.y = this.scene.bgsky2.y - 1280;
+                    this.scene.characterMoveCnt = 0;
                 }
 
+
+                console.log("this.scene.characterMoveCnt : " + this.scene.characterMoveCnt);
+
+
+                console.log("this.scene.characterMng.player.y : " + this.scene.characterMng.player.y);
+
                 console.log("bgsky1.y : " + this.scene.bgsky1.y);
-                console.log("bgsky2.y : " + this.scene.bgsky2.y);
+                console.log("bgsky2.y : " + this.scene.bg2.y);
                 console.log("bgsky3.y : " + this.scene.bgsky3.y);
                 console.log("cameras.main.scrollY : " + this.scene.cameras.main.scrollY);
                 console.log("game.config.height : " + this.scene.game.config.height);
@@ -322,20 +315,6 @@ export default class CharacterMng extends Phaser.GameObjects.GameObject {
     {
         let flyX = Phaser.Math.Between(150, 560); // x 좌표를 랜덤한 값으로 설정
         let flyY = this.player.y -1280; // player의 y 좌표에서 -1280만큼 위에 위치하도록 설정
-        console.log("++++++++++++++++++++++++++++++++++++++++++++++++flyY  : " + flyY );3
-
-         // 배경1 이동
-        // if (this.scene.flyY <= -1280) {
-        //     this.scene.bgsky1.y = this.scene.flyY + 1920;
-        // } else if (this.scene.flyY >= 1280) {
-        //     this.scene.bgsky2.y = this.scene.flyY - 1920;
-        // }
-        // // 배경2 이동
-        // if (scene.fly.y <= -3200) {
-        //     scene.bgsky2.y = scene.fly.y + 1920;
-        // } else if (scene.fly.y >= -640) {
-        //     scene.bgsky2.y = scene.fly.y - 1920;
-        // }
 
         if(this.fly == null)
         {
