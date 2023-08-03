@@ -5,7 +5,7 @@ var maxTileRange = 9;
 
 //DO STUFF TO PUSH ROW/COL GRID TO LEVELDATA ARRAY HERE
 
-//BEGIN BY RANDOMLY GENERATING TILES
+//BEGIN BY RANDOMLY GENERATING TILES a
 for (var i = 0 ; i < mapWidth; i++) {
     levelData[i] = []; // Initialize inner array
     for (var j = 0; j < mapWidth; j++) { // i++ needs to be j++
