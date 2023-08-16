@@ -48,39 +48,7 @@ export default class Ranking extends Phaser.Scene {
                 headers: {
                     'Content-Type' : 'application/json'
                 },
-                
-                // body: JSON.stringify({ key: 'value' }) // JSON 데이터 전송
             })
-            // .then(function(response) {
-            //     if (response.status >= 200 && response.status < 300) {
-            //         return response.text()
-            //     }
-            //     throw new Error(response.statusText)
-            // })
-            // .then(function(response) {
-            //     console.log(response);
-            // })
-
-            // const options = { //$enc_data 를 php 의 main 에서 가져오기 위한 옵션
-            //     url: 'http://127.0.0.1:5500/DBphp/get-rank.php',
-            //     method: 'POST',
-            //     json: true,
-            // };
-            // request.get(options, function (error, response, body) { 
-            //     var row_data = body; 
-            //     var row_datas = row_data.split('|');
-            //     if (row_datas[0]) {//실패한경우
-            //       res.render('error_chk', {
-            //         error_msg: row_datas[0]
-            //       });
-            //     } else { //정상적으로 가져온 경우
-            //       res.render('index', {
-            //         title: 'burning_camp',
-            //         post: false,
-            //         enc_data: row_datas[1],
-            //       });
-            //     }
-            // });
 
             if (!response.ok) {
                 throw new Error('Network response was not ok');
