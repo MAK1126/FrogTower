@@ -5,7 +5,7 @@ export default class fly extends Phaser.Physics.Matter.Sprite {
         this.scene.add.existing(this);
 
         const { Body, Bodies } = Phaser.Physics.Matter.Matter;
-        var flyCollider = Bodies.circle(this.x, this.y,100, {
+        var flyCollider = Bodies.circle(this.x, this.y,105, {
             isSensor: true, 
             label: "flyCollider",
             isStatic: true,
@@ -23,20 +23,11 @@ export default class fly extends Phaser.Physics.Matter.Sprite {
     }
     static preload(scene){
 
-       // 파리
-       scene.load.atlas(
-        "bug",
-        "assets/images/bug.png",
-        "assets/images/bug_atlas.json"
-    );
-    scene.load.animation('bug_anim', 'assets/images/bug_anim.json');
 
     }
 
     Init(posX,posY)
     {
-        console.log("fly init");
-
         this.x = posX;
         this.y = posY;
     }

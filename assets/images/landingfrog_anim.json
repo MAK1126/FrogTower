@@ -3,7 +3,7 @@
         {
             "key": "landingfrog_idle",
             "type": "frames",
-            "frameRate": 18,
+            "frameRate": 32,
             "frames": [
                 {
                     "key": "landingfrog",

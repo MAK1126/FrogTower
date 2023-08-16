@@ -4,7 +4,7 @@
             "key": "gameover_idle",
             "type": "frames",
             "repeat": -1,
-            "frameRate": 12,
+            "frameRate": 40,
             "frames": [
                 {
                     "key": "gameover",

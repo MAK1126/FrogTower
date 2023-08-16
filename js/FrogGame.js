@@ -1,6 +1,6 @@
 import Loading from "./Loading.js";
 import MainScene from "./MainScene.js";
-import Help from "./Help.js";
+import Ranking from "./Ranking.js"
 
 const config = {
     width: 720,
@@ -8,7 +8,7 @@ const config = {
     backgroundColor: '#333333',
     type: Phaser.AUTO,
     parent: 'FrogGame',
-    scene: [Loading,Help,MainScene],
+    scene: [Loading,MainScene,Ranking],
     scale: {
         mode:Phaser.Scale.FIT,//자동맞춤
                 autoCenter:Phaser.Scale.CENTER_BOTH,//가로세로 모두맞춤

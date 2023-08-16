@@ -15,18 +15,13 @@ export default class basicFrog extends Phaser.Physics.Matter.Sprite {
             frictionAir: 0.35
         });
         this.setExistingBody(compoundBody);
+        this.setFixedRotation(true); //충돌해도 안돌아가게
 
         this.isActive = true; // 기본값은 활성화 상태로 설정
         
     }
     static preload(scene){
-        scene.load.atlas(
-            "basicfrog",
-            "assets/images/basicfrog.png",
-            "assets/images/basicfrog_atlas.json"
-        );
-        scene.load.animation('basicfrog_anim', 'assets/images/basicfrog_anim.json');
-
+        
     }
     onCollision() {
         this.isActive = false; // 충돌 시 비활성화
@@ -34,7 +29,7 @@ export default class basicFrog extends Phaser.Physics.Matter.Sprite {
     update()
     {
         if (this.isActive) {
-            this.anims.play("basicfrog_idle", true);
+            // this.anims.play("basicfrog_idle", true);
         }
     }    
 }

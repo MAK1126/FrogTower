@@ -2,6 +2,7 @@ import Player from "./Player.js";
 import BasicFrog from "./basicFrog.js";
 import Fly from "./fly.js";
 import MainScene from "./MainScene.js";
+import Loading from "./Loading.js";
 
 export default class CharacterMng extends Phaser.GameObjects.GameObject {
 
@@ -13,6 +14,20 @@ export default class CharacterMng extends Phaser.GameObjects.GameObject {
         this.scene.add.existing(this);
 
         this.mainScene = scene; // MainScene.js의 인스턴스를 저장합니다.
+        this.isSoundPlaying = this.scene.isSoundPlaying;
+        
+    }
+    init(message){
+
+        console.log("CharacterMng init message : "+ message);
+        if(message == 100)
+        {
+            this.isSoundPlaying= false;
+        }
+        else
+        {
+            this.isSoundPlaying= true;
+        }
     }
     static preload(scene)
     {
@@ -21,6 +36,14 @@ export default class CharacterMng extends Phaser.GameObjects.GameObject {
         Fly.preload(scene);
 
         this.scene = scene;
+
+        // basicfrog
+        scene.load.atlas(
+            "basicfrog",
+            "assets/images/basicfrog.png",
+            "assets/images/basicfrog_atlas.json"
+        );
+        scene.load.animation('basicfrog_anim', 'assets/images/basicfrog_anim.json');
 
         // sleep frog
         scene.load.atlas(
@@ -38,8 +61,8 @@ export default class CharacterMng extends Phaser.GameObjects.GameObject {
         );
         scene.load.animation('wakeupfrog_idle', 'assets/images/wakeupfrog_anim.json');
 
-         //jumpfrog
-         scene.load.atlas(
+        //jumpfrog
+        scene.load.atlas(
             "jumpfrog",
             "assets/images/jumpfrog.png",
             "assets/images/jumpfrog_atlas.json"
@@ -47,7 +70,7 @@ export default class CharacterMng extends Phaser.GameObjects.GameObject {
         scene.load.animation('jumpfrog_idle', 'assets/images/jumpfrog_anim.json');
 
         //landingfrog
-         scene.load.atlas(
+        scene.load.atlas(
             "landingfrog",
             "assets/images/landingfrog.png",
             "assets/images/landingfrog_atlas.json"
@@ -61,7 +84,7 @@ export default class CharacterMng extends Phaser.GameObjects.GameObject {
             "assets/images/gameover_atlas.json"
         );
         scene.load.animation('gameover_anim', 'assets/images/gameover_anim.json');
-        
+
         // 위 화살표 
         scene.load.atlas(
             "up",
@@ -69,15 +92,23 @@ export default class CharacterMng extends Phaser.GameObjects.GameObject {
             "assets/images/up_atlas.json"
         );
         scene.load.animation('up_anim', 'assets/images/up_anim.json');
-    }
 
+        // 파리
+        scene.load.atlas(
+            "bug",
+            "assets/images/bug.png",
+            "assets/images/bug_atlas.json"
+        );
+        scene.load.animation('bug_anim', 'assets/images/bug_anim.json');
+
+    }
     update()
     {
         this.player.update();
         this.basicFrog.update();
 
         // 개구리의 애니메이션이 완료되었을 때 상태를 업데이트합니다.
-        if (this.player.anims.currentAnim && this.player.anims.currentAnim.key === "jumpfrog_idle" && this.player.anims.currentAnim.isLastFrame) {
+        if (this.player.anims.curre === "jumpfrog_idle" && this.player.anims.currentntAnim && this.player.anims.currentAnim.keyAnim.isLastFrame) {
             this.player.onJumpComplete();
         }
 
@@ -123,7 +154,8 @@ export default class CharacterMng extends Phaser.GameObjects.GameObject {
         if(currentAnimName !== "wakeupfrog_idle" &&
         currentAnimName !== "jumpfrog_idle" &&
         currentAnimName !== "basicfrog_idle" &&
-        currentAnimName !== "landingfrog_idle")
+        currentAnimName !== "landingfrog_idle" &&
+        currentAnimName !== "gameover_idle")
         {
             this.player.setTexture("wakeupfrog");
             this.player.anims.play("wakeupfrog_idle",true);
@@ -192,6 +224,8 @@ export default class CharacterMng extends Phaser.GameObjects.GameObject {
                 return;
             }
 
+            
+
             this.scene.characterMng.player.setTexture("landingfrog");
             this.scene.characterMng.player.anims.play("landingfrog_idle",true);
 
@@ -203,20 +237,22 @@ export default class CharacterMng extends Phaser.GameObjects.GameObject {
             basicFrog.onCollision();
 
             // 개구리 착지할 때 음악 재생 
-            this.frogArray = this.scene.sound.add("frogArray");
-            this.frogArray.play();
+            if (this.scene.isSoundPlaying) {
+                this.scene.frogArraySound = this.scene.sound.add("frogArray");
+                this.scene.frogArraySound.play();
+            }
 
             // 충돌 시 점수 증가
             this.scene.score += 2;  
             //this.scene.score++;  //-- 이건 1점씩 오르기
-                        
-            
-            this.scene.characterMoveCnt++;
-
             // 점수를 UI에 표시
             this.scene.scoreText.setText(`${this.scene.score}`);
             // 텍스트 위치 고정
             this.scene.scoreText.setScrollFactor(0);
+
+
+            this.scene.characterMoveCnt++;
+     
 
             // 애니메이션의 onComplete 콜백 등록
             this.scene.characterMng.player.once("animationcomplete", () => {
@@ -226,7 +262,6 @@ export default class CharacterMng extends Phaser.GameObjects.GameObject {
                 let aa = this.scene.characterMng.basicFrog.y;
                 let bb = this.scene.characterMng.player.y;
                 let cc = 300 + (bb - aa);
-                console.log("onAnimationComplete cc : " + cc);
 
                 this.scene.characterMng.createBasicFrog(
                     this.scene.characterMng.player.x, this.scene.characterMng.player.y
@@ -241,25 +276,12 @@ export default class CharacterMng extends Phaser.GameObjects.GameObject {
                 {
                     this.scene.bgskySprites[0].y = this.scene.bgskySprites[2].y - 1280;
                     this.scene.bg2.setTexture('bgsky');
-                    console.log("########### b1 change ###############");
                     let bottmBG = this.scene.bgskySprites[0];
                     this.scene.bgskySprites.splice(0,1);
                     this.scene.bgskySprites.push(bottmBG);
 
                     this.scene.characterMoveCnt = 0;
                 }
-
-
-                console.log("this.scene.characterMoveCnt : " + this.scene.characterMoveCnt);
-
-
-                console.log("this.scene.characterMng.player.y : " + this.scene.characterMng.player.y);
-
-                console.log("bgsky1.y : " + this.scene.bgsky1.y);
-                console.log("bgsky2.y : " + this.scene.bg2.y);
-                console.log("bgsky3.y : " + this.scene.bgsky3.y);
-                console.log("cameras.main.scrollY : " + this.scene.cameras.main.scrollY);
-                console.log("game.config.height : " + this.scene.game.config.height);
             });
           }
         });
@@ -275,8 +297,10 @@ export default class CharacterMng extends Phaser.GameObjects.GameObject {
           )
           {
             // 파리 먹을 때 음악 재생 
-            this.eatBug = this.scene.sound.add("eatBug");
-            this.eatBug.play();
+            if (this.scene.isSoundPlaying) {
+                this.scene.eatBugSound = this.scene.sound.add("eatBug");
+                this.scene.eatBugSound.play();
+            }
 
             // 충돌 시 점수 증가
             this.scene.score += 10;  
@@ -294,7 +318,6 @@ export default class CharacterMng extends Phaser.GameObjects.GameObject {
 
     Init()
     {
-        console.log("characterMng init");
         this.createBasicFrog(360,1000);
         this.createPlayer();
         this.createArrow();
@@ -307,7 +330,18 @@ export default class CharacterMng extends Phaser.GameObjects.GameObject {
     // 카메라를 이동
     startCameraMove(range) 
     {
-        this.scene.cameras.main.scrollY -= range;
+         // 현재 카메라의 Y 좌표를 가져옵니다.
+         const currentCameraY = this.scene.cameras.main.scrollY;
+
+         // Tweens를 생성하여 카메라의 Y 좌표를 서서히 변경합니다.
+         this.scene.tweens.add({
+             targets: this.scene.cameras.main,
+             scrollY: currentCameraY - range,
+             duration: 300, // 애니메이션 지속 시간 (밀리초 단위)
+             ease: 'Linear', // 애니메이션의 효과를 설정합니다. 여기서는 일정한 속도로 이동하도록 설정합니다.
+         });
+
+        
     }
 
     // 파리 생성
@@ -334,7 +368,6 @@ export default class CharacterMng extends Phaser.GameObjects.GameObject {
 
         this.arrow.setVisible(true); // 기존의 화살표를 보이도록 설정
         this.arrow.x = this.fly.x; // 화살표와 파리 x축 같게 설정.
-        // this.fly.x = this.arrow.setOrigin(0.5,1);
     }
 
     // 화살표 생성
