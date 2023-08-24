@@ -16,12 +16,14 @@ export default class Loading extends Phaser.Scene{
 
     }
     preload(){
+
         //이미지
         this.load.image("background","assets/images/타이틀전체배경.png");
         this.load.image("button", "assets/images/플레이 버튼.png");
         this.load.image("soundon", "assets/images/사운드 켜짐.png");
         this.load.image("soundoff", "assets/images/사운드 꺼짐.png");
         this.load.image("help", "assets/images/도움말 버튼.png");
+
         //도움말 이미지
         this.load.image("xbutton", "assets/images/xbutton.png");
         this.load.image("control", "assets/images/control.png");
@@ -58,10 +60,8 @@ export default class Loading extends Phaser.Scene{
                 target: "mainScene",
                 duration: 500,
                 data: this.isSoundPlaying ? 100 : 200,
-                // data: this.scene.bgmSound = this.bgmSound,
             });
             console.log("button click");
-            
         });
 
         //sound 클릭 이벤트
@@ -86,7 +86,6 @@ export default class Loading extends Phaser.Scene{
         //help 클릭 이벤트
         help.setInteractive({ useHandCursor: true });
         help.on("pointerdown", () => {
-        console.log("help this.isHelpVisible : "+ this.isHelpVisible);
 
         if(!this.isHelpVisible){
             // 버튼 클릭 가능 여부를 업데이트
@@ -99,10 +98,8 @@ export default class Loading extends Phaser.Scene{
                 // 도움말 이미지가 보일 때 기존 버튼들을 비활성화
                 s1.setInteractive(false);
                 help.setInteractive(false);
-                console.log("this.isHelpVisible : "+ this.isHelpVisible);
             } 
         }else {
-            console.log("else this.isHelpVisible : "+ this.isHelpVisible);
             // 도움말 이미지가 숨겨질 때 기존 버튼들을 다시 활성화
             s1.setInteractive(true);
             help.setInteractive(true);
@@ -114,7 +111,6 @@ export default class Loading extends Phaser.Scene{
             // 버튼 클릭 가능 여부를 업데이트
             this.isHelpVisible = !this.isHelpVisible;
         }
-        
             console.log("help click");
         });
     }

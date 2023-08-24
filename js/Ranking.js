@@ -1,13 +1,8 @@
-// import fetch from "node-fetch";
-// import CDatabase from "./CDatabase.js";
 
-// import { request, response } from 'express';
-// import * as querystring from 'querystring';
 
 export default class Ranking extends Phaser.Scene {
     constructor() {
         super("ranking");
-        // this.database = new CDatabase;
     }
     preload() {
         //이미지
@@ -29,7 +24,7 @@ export default class Ranking extends Phaser.Scene {
         const fontStyle = {
             font: '60px myfont',
             fill: 'black',
-            align: 'center',
+            align: 'center', 
             stroke: 'black', // 두껍게 효과를 주기 위해 stroke 속성 추가
             strokeThickness: 2.5,
         };
@@ -38,11 +33,9 @@ export default class Ranking extends Phaser.Scene {
         this.scene.scoreText = this.add.text(360, 1100, `${this.score}`,fontStyle );
         this.scene.scoreText.setOrigin(0.5, 0.5);
 
-
+        //rank쿼리 연결하기
         try {
-            console.log("dbcon");
-
-            const response = await fetch('../DBphp/get-rank.php', //http://127.0.0.1:5500/DBphp/get-rank.php
+            const response = await fetch('../DBphp/get-rank.php', 
             {                           
                 method: 'GET',
                 headers: {
@@ -55,15 +48,11 @@ export default class Ranking extends Phaser.Scene {
             }
 
             const data = await response.json();
-            // const data = await response.text();
-
             console.log(data); // 응답 데이터 출력
-
                 
             // 동적으로 생성된 텍스트 추가하기
             const yPositions = [332, 465, 592, 720, 848];
             for (let i = 0; i < 5; i++) {
-
                 const rankText = this.add.text(360, yPositions[i], data[i], fontStyle).setOrigin(0.5, 0.5);
                 // data[i]는 서버에서 받은 상위 5개의 점수값
             }
@@ -75,9 +64,7 @@ export default class Ranking extends Phaser.Scene {
         //button 클릭 이벤트
         xb.setInteractive({ useHandCursor: true }); // 버튼에 인터랙션 추가
         xb.on("pointerdown", () => {
-
             // this.game.destroy(); // 게임 창 닫기
-
             console.log("xb click");
               
         });

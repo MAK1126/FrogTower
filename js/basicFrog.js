@@ -4,6 +4,7 @@ export default class basicFrog extends Phaser.Physics.Matter.Sprite {
         super(scene.matter.world, x, y, texture, frame);
         this.scene.add.existing(this);
 
+        // 충돌 설정
         const { Body, Bodies } = Phaser.Physics.Matter.Matter;
         var basicfrogCollider = Bodies.rectangle(this.x, this.y, 55, 165, {
             isSensor: true, 
@@ -20,8 +21,9 @@ export default class basicFrog extends Phaser.Physics.Matter.Sprite {
         this.isActive = true; // 기본값은 활성화 상태로 설정
         
     }
-    static preload(scene){
-        
+    static preload(scene)
+    {   
+       
     }
     onCollision() {
         this.isActive = false; // 충돌 시 비활성화

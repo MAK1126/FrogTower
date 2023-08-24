@@ -1,6 +1,5 @@
 import ranking from "./Ranking.js";
 
-
 export default class Player extends Phaser.Physics.Matter.Sprite {
 
     constructor(data){
@@ -8,6 +7,7 @@ export default class Player extends Phaser.Physics.Matter.Sprite {
         super(scene.matter.world, x, y, texture, frame);
         this.scene.add.existing(this);
 
+        // 충돌 설정
         const { Body, Bodies } = Phaser.Physics.Matter.Matter;
         var playerCollider = Bodies.rectangle(this.x, this.y, 55, 165, {
             isSensor: true, 
@@ -94,9 +94,10 @@ export default class Player extends Phaser.Physics.Matter.Sprite {
         this.speed = 0;
         this.setVelocityY(0);
 
+        //게임오버 이미지와 애니
         this.gameover = this.setTexture("gameover").setDepth(4);
         this.anims.play("gameover_idle", true).setDepth(4);
-        this.gameover.setScrollFactor(0);
+        this.gameover.setScrollFactor(0); //위치 고정
         
         
         // 게임오버 음악 재생 
@@ -111,19 +112,44 @@ export default class Player extends Phaser.Physics.Matter.Sprite {
         
     }
     // --------------------------게임오버 씬 전환을 위한 콜백 함수---------------------------
-    GameoverChangeScene(){
-
+    async GameoverChangeScene(){
+        console.log("GameoverChangeScene");
+        console.log(LOG_GAMEDATA_PK);
+        // 사운드
         if (this.scene.isSoundPlaying) {
             this.scene.sound.stopAll();
         }
-
+        // 점수 데이터 넘기기
         let data = {
             score : this.scene.score,
         }
+        // UPDATE
+        try {
+            console.log("update");
+            const response = await fetch('../DBphp/update-column.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    pk: LOG_GAMEDATA_PK,
+                    column: "GAMEDATA_POINT",
+                    value: data.score,
+                }),
+            });
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+
+        } catch (error) {
+            console.error('Error:', error);
+        }
+
         // 씬 전환
-        this.scene.scene.start("ranking", data);
+         this.scene.scene.start("ranking", data);
 
     }
+
     create(){
         // 카메라 이동을 위해 추가
         this.isScrolling = false;
@@ -137,7 +163,7 @@ export default class Player extends Phaser.Physics.Matter.Sprite {
             // 이동
             this.setVelocityY(this.JumpSpeed);
         
-            // -------------------충돌 없이 하강하는 플레이어 목숨 감소-------------------------------
+            // -----------------------------충돌 없이 하강하는 플레이어 목숨 감소-------------------------------
             if (this.y > (1280 + 80 + 1000) && !this.isConditionMet1 && this.scene.life1.visible) {
                 // 개구리 떨어질 때 음악 재생 
                 if(this.isSoundPlaying)
@@ -157,7 +183,6 @@ export default class Player extends Phaser.Physics.Matter.Sprite {
 
                 this.isConditionMet1 = true; // 첫 번째 조건이 충족되었을 때 isConditionMet1을 true로 설정
             }
-          
             if (this.y > (1280 + 80 + 1100) && this.isConditionMet1 
             && !this.isConditionMet2 && this.scene.life2.visible) {
                 // 개구리 떨어질 때 음악 재생 
@@ -178,7 +203,6 @@ export default class Player extends Phaser.Physics.Matter.Sprite {
                 
                 this.isConditionMet2 = true; // 두 번째 조건이 충족되었을 때 isConditionMet2를 true로 설정
             }
-          
             if (this.y > (1280 + 80 + 1200) && this.isConditionMet2) {
                 // 개구리 떨어질 때 음악 재생 
                 if(this.isSoundPlaying)
@@ -190,8 +214,6 @@ export default class Player extends Phaser.Physics.Matter.Sprite {
                 this.scene.life3.setVisible(false); // 세 번째 조건이 충족되었을 때 원하는 동작 수행
                 this.Gameover();
             }
-            
-            //
             if(this.isFall == false && this.JumpSpeed > 0)
             {
                 this.isFall = true;
@@ -225,7 +247,7 @@ export default class Player extends Phaser.Physics.Matter.Sprite {
         this.characterMng.player.setVelocityY(this.characterMng.player.JumpStartSpeed);
 
     }
-    
+    // 착지
     onLandingComplete(animation, frame)
     {
         this.Init();

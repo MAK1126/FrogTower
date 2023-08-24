@@ -5,21 +5,15 @@ import MainScene from "./MainScene.js";
 import Loading from "./Loading.js";
 
 export default class CharacterMng extends Phaser.GameObjects.GameObject {
-
     constructor(data){
-        console.log("constructor CharacterMng");
-    
         let { scene} = data;
         super(scene);
         this.scene.add.existing(this);
 
         this.mainScene = scene; // MainScene.js의 인스턴스를 저장합니다.
         this.isSoundPlaying = this.scene.isSoundPlaying;
-        
     }
     init(message){
-
-        console.log("CharacterMng init message : "+ message);
         if(message == 100)
         {
             this.isSoundPlaying= false;
@@ -32,8 +26,8 @@ export default class CharacterMng extends Phaser.GameObjects.GameObject {
     static preload(scene)
     {
         Player.preload(scene);
-        BasicFrog.preload(scene);
-        Fly.preload(scene);
+        // BasicFrog.preload(scene);
+        // Fly.preload(scene);
 
         this.scene = scene;
 
@@ -128,7 +122,6 @@ export default class CharacterMng extends Phaser.GameObjects.GameObject {
         else {
             if (this.arrow) {
                 this.arrow.setVisible(true);
-
                 if (this.fly) {
                     // 화살표의 위치를 파리의 위치로 설정
                     this.arrow.setPosition(this.fly.x, this.arrow.y);
@@ -179,8 +172,6 @@ export default class CharacterMng extends Phaser.GameObjects.GameObject {
 
     createBasicFrog(frogX,frogY)
     {
-        console.log("createBasicFrog");
-
         this.basicFrog = new BasicFrog({
             scene: this.scene,
             x: frogX,
@@ -188,7 +179,6 @@ export default class CharacterMng extends Phaser.GameObjects.GameObject {
             texture: "basicfrog",
             frame: "basic0001",
         });
-        
         this.basicFrog.setDepth(-1); // 플레이어보다 뒤에 나오게 깊이 설정함
     }
 
@@ -211,21 +201,19 @@ export default class CharacterMng extends Phaser.GameObjects.GameObject {
         if(this.scene.characterMng.player.isFall == false)
             return;
 
+        // 충돌 처리
         const { bodyA, bodyB } = pair;
         if (
             (bodyA.label === "playerCollider" && bodyB.label === "basicfrogCollider") ||
             (bodyA.label === "basicfrogCollider" && bodyB.label === "playerCollider")
         ) 
         {
-
             const basicFrog = bodyA.label === "basicfrogCollider" ? bodyA.gameObject : bodyB.gameObject;
-
-            if (!basicFrog.isActive) { // 이미 충돌한 개구리는 충돌 처리를 건너뜁니다.
+            // 이미 충돌한 개구리는 충돌 처리를 건너뜁니다.
+            if (!basicFrog.isActive) { 
                 return;
             }
-
-            
-
+            // 착지 이미지
             this.scene.characterMng.player.setTexture("landingfrog");
             this.scene.characterMng.player.anims.play("landingfrog_idle",true);
 
@@ -250,19 +238,18 @@ export default class CharacterMng extends Phaser.GameObjects.GameObject {
             // 텍스트 위치 고정
             this.scene.scoreText.setScrollFactor(0);
 
-
             this.scene.characterMoveCnt++;
      
 
             // 애니메이션의 onComplete 콜백 등록
-            this.scene.characterMng.player.once("animationcomplete", () => {
-                // 애니메이션이 완료된 후에 실행할 코드 작성
+            this.scene.characterMng.player.once("animationcomplete", () => {  // 애니메이션이 완료된 후에 실행할 코드 작성
 
                 // 카메라 이동 거리
                 let aa = this.scene.characterMng.basicFrog.y;
                 let bb = this.scene.characterMng.player.y;
                 let cc = 300 + (bb - aa);
 
+                // basicfrog 생성 위치
                 this.scene.characterMng.createBasicFrog(
                     this.scene.characterMng.player.x, this.scene.characterMng.player.y
                 );
@@ -271,7 +258,6 @@ export default class CharacterMng extends Phaser.GameObjects.GameObject {
 
                 // 카메라 이동
                 this.scene.characterMng.startCameraMove(cc);
-
                 if(this.scene.characterMoveCnt > 7)
                 {
                     this.scene.bgskySprites[0].y = this.scene.bgskySprites[2].y - 1280;
@@ -279,7 +265,6 @@ export default class CharacterMng extends Phaser.GameObjects.GameObject {
                     let bottmBG = this.scene.bgskySprites[0];
                     this.scene.bgskySprites.splice(0,1);
                     this.scene.bgskySprites.push(bottmBG);
-
                     this.scene.characterMoveCnt = 0;
                 }
             });
@@ -288,8 +273,8 @@ export default class CharacterMng extends Phaser.GameObjects.GameObject {
     }
     //-------------------- ↑↑ 충돌하는 동안 호출( ↓↓ 파리와 개구리 충돌)-----------------
     collisionActive(event){
+        // 충돌 처리
         event.pairs.forEach(async (pair) => {    
-
           const { bodyA, bodyB } = pair;
         if (
             (bodyA.label === "flyCollider" && bodyB.label === "basicfrogCollider") ||
@@ -301,11 +286,9 @@ export default class CharacterMng extends Phaser.GameObjects.GameObject {
                 this.scene.eatBugSound = this.scene.sound.add("eatBug");
                 this.scene.eatBugSound.play();
             }
-
             // 충돌 시 점수 증가
             this.scene.score += 10;  
             this.scene.scoreText.setText(`${this.scene.score}`);
-
             //파리 생성
             this.scene.characterMng.flyCreate();
           }
@@ -315,7 +298,6 @@ export default class CharacterMng extends Phaser.GameObjects.GameObject {
             this.scene.characterMng.flyCreate();
         }
     }
-
     Init()
     {
         this.createBasicFrog(360,1000);

@@ -67,7 +67,6 @@ export default class MainScene extends Phaser.Scene{
         this.bgskySprites.push(this.bg2);
         this.bgskySprites.push(this.bgsky3);
 
-
         this.bgBottom = this.bgsky1;
         this.bgTop = this.bgsky3;
 
@@ -113,7 +112,7 @@ export default class MainScene extends Phaser.Scene{
 
         this.characterMng.Init();
 
-        // 게임 시작 시 프로그레스 바를 보여주고 타이머를 시작
+        // 게임 시작 시 프로그레스 바를 보여주고 타이머를 시작 !!!
         this.startProgressBar(10); //10초간
 
         // 화면 클릭하면 pointerdownF 함수 호출
@@ -144,10 +143,11 @@ export default class MainScene extends Phaser.Scene{
         this.characterMng.changeSleepFrog();
     }
 
+    //타임 게이지 바
     startProgressBar(timeInSeconds) {
         // 프로그레스 바를 처음에 100%로 설정
         this.barGG.displayHeight = this.barGG.height;
-        this.barGG.setOrigin(0.5, 1); // 프로그레스 바의 정렬을 설정합니다.
+        this.barGG.setOrigin(0.5, 1); // 프로그레스 바의 정렬을 설정
 
         const totalHeight = this.barGG.height;
         const decreasePerSecond = totalHeight / (timeInSeconds * 60);
@@ -171,8 +171,6 @@ export default class MainScene extends Phaser.Scene{
     }
 
     handleProgressLife() {
-        console.log("this.barGG.displayHeight : "+ this.barGG.displayHeight);
-
 
         if ( this.barGG.displayHeight == 0 && !this.isLifeCnt1 && this.life1.visible) {
             this.life1.setVisible(false); // life1 이미지 숨김
@@ -200,9 +198,6 @@ export default class MainScene extends Phaser.Scene{
             this.progressBarTimer.remove();
         }
 
-
-
-      
     }
 
     update(){
