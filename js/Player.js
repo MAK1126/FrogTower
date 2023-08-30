@@ -88,7 +88,7 @@ export default class Player extends Phaser.Physics.Matter.Sprite {
         this.setTexture("sleepfrog");
         this.anims.play("sleepfrog_idle", true);
     }
-    Gameover(){
+    async Gameover(){
         this.x = 360;
         this.y = 350;
         this.speed = 0;
@@ -99,13 +99,40 @@ export default class Player extends Phaser.Physics.Matter.Sprite {
         this.anims.play("gameover_idle", true).setDepth(4);
         this.gameover.setScrollFactor(0); //위치 고정
         
-        
         // 게임오버 음악 재생 
         if(this.isSoundPlaying)
         {
             this.gameOver = this.mainScene.sound.add("gameOver");
             this.gameOver.play();
         }
+
+        // 데이터 날짜형식으로 정의해줌
+        let data = {
+            date: new Date()
+        }
+        // 한국 표준시 (KST) 기준으로 변환
+        let koreanTime = new Date(data.date.getTime() + (9 * 60 * 60 * 1000));
+        let formattedDateTime = koreanTime.toISOString().slice(0, 19).replace('T', ' ');
+        console.log(formattedDateTime);
+
+        // UPDATE
+        try {
+            const formData = new FormData();
+            formData.append('pk', LOG_GAMEDATA_PK);
+            formData.append('column', 'GAMEDATA_START_DT');
+            formData.append('value', formattedDateTime);
+
+            const response = await fetch('../04-frog-tower/DBphp/update-column.php', {
+                method: 'POST',
+                body: formData
+            });
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+        } catch (error) {
+            console.error('Error:', error);
+        }
+        
         
         // 1.8초 후에 다른 씬으로 전환하기 위해 타이머 설정
         this.scene.time.delayedCall(1800, this.GameoverChangeScene, [], this);
@@ -113,7 +140,6 @@ export default class Player extends Phaser.Physics.Matter.Sprite {
     }
     // --------------------------게임오버 씬 전환을 위한 콜백 함수---------------------------
     async GameoverChangeScene(){
-        console.log("GameoverChangeScene");
         console.log(LOG_GAMEDATA_PK);
         // 사운드
         if (this.scene.isSoundPlaying) {
@@ -125,22 +151,18 @@ export default class Player extends Phaser.Physics.Matter.Sprite {
         }
         // UPDATE
         try {
-            console.log("update");
-            const response = await fetch('../DBphp/update-column.php', {
+            const formData = new FormData();
+            formData.append('pk', LOG_GAMEDATA_PK);
+            formData.append('column', 'GAMEDATA_POINT');
+            formData.append('value', data.score);
+
+            const response = await fetch('../04-frog-tower/DBphp/update-column.php', {
                 method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    pk: LOG_GAMEDATA_PK,
-                    column: "GAMEDATA_POINT",
-                    value: data.score,
-                }),
+                body: formData
             });
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
-
         } catch (error) {
             console.error('Error:', error);
         }

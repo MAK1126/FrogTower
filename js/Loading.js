@@ -43,19 +43,49 @@ export default class Loading extends Phaser.Scene{
         this.isHelpVisible = false; 
         let con, xb, s2; // 도움말 이미지와 버튼
 
-
         // 전역 변수에 사운드 객체들 할당
         this.bgmSound = this.sound.add("bgm", { loop: true });
      
-
         // 배경음악 재생 
         this.bgmSound.play();
         // 볼륨 값 설정 (0.0 ~ 1.0 사이의 값)
         this.bgmSound.setVolume(0.5); // 50% 볼륨으로 설정
+
         
-        //button 클릭 이벤트
+        // play button 클릭 이벤트
         b2.setInteractive({ useHandCursor: true }); // 버튼에 인터랙션 추가
-        b2.on("pointerdown", () => {
+        b2.on("pointerdown", async () => {
+
+            // 데이터 날짜형식으로 정의해줌
+            let data = {
+                date: new Date()
+            }
+            // 한국 표준시 (KST) 기준으로 변환
+            let koreanTime = new Date(data.date.getTime() + (9 * 60 * 60 * 1000));
+            let formattedDateTime = koreanTime.toISOString().slice(0, 19).replace('T', ' ');
+            console.log(formattedDateTime);
+            
+
+            // UPDATE
+            try {
+                const formData = new FormData();
+                formData.append('pk', LOG_GAMEDATA_PK);
+                formData.append('column', 'GAMEDATA_START_DT');
+                formData.append('value', formattedDateTime);
+
+                const response = await fetch('../04-frog-tower/DBphp/update-column.php', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+
+            } catch (error) {
+                console.error('Error:', error);
+            }
+
             this.scene.transition({
                 target: "mainScene",
                 duration: 500,

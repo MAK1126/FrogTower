@@ -13,6 +13,8 @@ export default class MainScene extends Phaser.Scene{
         this.characterMoveCnt = 0;
         this.isSoundPlaying;
         this.bgmSound;
+
+        
         
     }
     init(message){
@@ -74,17 +76,22 @@ export default class MainScene extends Phaser.Scene{
         this.life2 = this.add.sprite(600,40,'life');
         this.life1 = this.add.sprite(530,40,'life');
 
-        // 타임바 이미지
-        this.barCase = this.add.sprite(675, 640, 'barCase').setDepth(3);
-        this.barBg = this.add.sprite(675, 640, 'barBg').setDepth(1);
-        this.barGG = this.add.sprite(675, 960, 'barGG').setDepth(2);
-        
+        // 타임바 이미지 / Container 생성  
+        this.barContainer = this.add.container(675, 700);
+        this.barBg = this.add.sprite(0, 0, 'barBg').setDepth(1);
+        this.barGG = this.add.sprite(0, 320, 'barGG').setDepth(2);  // -- 컨테이너 위치(675, 700) 기준에서 위치 조정 
+        this.barCase = this.add.sprite(0, 0, 'barCase').setDepth(3);
+
+        this.barContainer.add(this.barBg);
+        this.barContainer.add(this.barGG);
+        this.barContainer.add(this.barCase);
+        this.barContainer.setScale(1, 0.7); 
+
         // 타임바 이미지 위치 화면에 고정
         this.barCase.setScrollFactor(0);
         this.barBg.setScrollFactor(0);
         this.barGG.setScrollFactor(0);
 
-       
 
         //폰트스타일
         const fontStyle = {

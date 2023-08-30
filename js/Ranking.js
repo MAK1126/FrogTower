@@ -35,7 +35,7 @@ export default class Ranking extends Phaser.Scene {
 
         //rank쿼리 연결하기
         try {
-            const response = await fetch('../DBphp/get-rank.php', 
+            const response = await fetch('../04-frog-tower/DBphp/get-rank.php', 
             {                           
                 method: 'GET',
                 headers: {
@@ -64,7 +64,10 @@ export default class Ranking extends Phaser.Scene {
         //button 클릭 이벤트
         xb.setInteractive({ useHandCursor: true }); // 버튼에 인터랙션 추가
         xb.on("pointerdown", () => {
-            // this.game.destroy(); // 게임 창 닫기
+
+            // 브라우저 창 닫기
+            close_game();
+
             console.log("xb click");
               
         });

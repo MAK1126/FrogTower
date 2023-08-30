@@ -1,18 +1,10 @@
 <?php
 include('sql-config.php');
 
-$inputJSON = file_get_contents("php://input");
-$input = json_decode($inputJSON, true);
+$LOG_GAMEDATA_PK = $_POST['pk'];
+$column = $_POST['column'];
+$value = $_POST['value'];
 
-print_r($input);
-
-$LOG_GAMEDATA_PK = $input['pk'];
-$column = $input['column'];
-$value = $input['value'];
-
-echo "LOG_GAMEDATA_PK : " . $LOG_GAMEDATA_PK;
-echo "column : " . $column;
-echo "value : " . $value;
 
 $conn = new mysqli($config["host"], $config["username"], $config["password"], $config["database"]);
 
@@ -23,12 +15,12 @@ if ($conn->connect_error) {
 //조작 방지를 위해 콘솔 창 오픈 시 조작 여부 업데이트
 if($column == '' && $value == '')
 {
-    $sql = "UPDATE LOG_GAMEDATA_TB SET GAMEDATA_FL = 'Y' WHERE LOG_GAMEDATA_PK = {$LOG_GAMEDATA_PK} ";
+    $sql = "UPDATE LOG_GAMEDATA_TB SET GAMEDATA_FL = 'Y' WHERE LOG_GAMEDATA_PK = '{$LOG_GAMEDATA_PK}' ";
 }
 else
 {
     //현재 PK 값 select 해서 OG 값 확인
-    $sql = "SELECT * FROM LOG_GAMEDATA_TB WHERE LOG_GAMEDATA_PK = {$LOG_GAMEDATA_PK}";
+    $sql = "SELECT * FROM LOG_GAMEDATA_TB WHERE LOG_GAMEDATA_PK = '{$LOG_GAMEDATA_PK}'";
     $result = $conn->query($sql);
     $checkData = $result->fetch_assoc();
     
@@ -41,11 +33,11 @@ else
     
     if ($column == "GAMEDATA_POINT")
     {
-        $sql = "UPDATE LOG_GAMEDATA_TB SET GAMEDATA_POINT = {$value}, GAMEDATA_POINT_OG = NOW() WHERE LOG_GAMEDATA_PK = {$LOG_GAMEDATA_PK}";
+        $sql = "UPDATE LOG_GAMEDATA_TB SET GAMEDATA_POINT = '{$value}', GAMEDATA_POINT_OG = NOW() WHERE LOG_GAMEDATA_PK = '{$LOG_GAMEDATA_PK}'";
     }
     else
     {
-        $sql = "UPDATE LOG_GAMEDATA_TB SET {$column} = {$value}, GAMEDATA_POINT_OG = NOW() WHERE LOG_GAMEDATA_PK = {$LOG_GAMEDATA_PK}";
+        $sql = "UPDATE LOG_GAMEDATA_TB SET {$column} = '{$value}', GAMEDATA_POINT_OG = NOW() WHERE LOG_GAMEDATA_PK = '{$LOG_GAMEDATA_PK}'";
     }
 }
 
@@ -57,4 +49,5 @@ if ($conn->query($sql) === TRUE) {
 
 // DB연결 종료
 $conn->close();
+
 ?>

@@ -26,9 +26,6 @@ export default class CharacterMng extends Phaser.GameObjects.GameObject {
     static preload(scene)
     {
         Player.preload(scene);
-        // BasicFrog.preload(scene);
-        // Fly.preload(scene);
-
         this.scene = scene;
 
         // basicfrog
